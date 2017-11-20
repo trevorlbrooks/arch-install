@@ -1,7 +1,7 @@
 
 pacstrap /mnt base
 genfstab -L /mnt >> /mnt/etc/fstab
-arch-chroot /mnt
+arch-chroot /mnt << EOSH
 ln -sf /usr/share/zoneinfo/America/Denver /etc/localtime
 hwclock --systohc
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
@@ -75,6 +75,6 @@ pacaur -S discord
 pacaur -S spotify
 
 EOF
-
+EOSH
 echo "Setup complete. You should now set root and user passwords."
 

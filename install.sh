@@ -10,21 +10,21 @@ locale-gen
 echo "archvm" >> /etc/hostname
 
 pacman -Syu
-pacman -S wicd grub --no-confirm --needed
+pacman -S wicd grub --noconfirm --needed
 grub-install --target=i386-pc /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 systemctl enable wicd
-pacman -S vim docker i3 rofi feh wget rsync compton --no-confirm --needed  
-pacman -S python python3 mysql-workbench --no-confirm --needed
-pacman -S binutils make gcc fakeroot pkg-config git expac yajl --no-confirm --needed
-pacman -S sudo gdm htop tmux --no-confirm --needed
-sudo pacman -S firefox pulseaudio konsole termite intellij-idea-community-edition maven apache-ant nautilus screenfetch markdown atom calibre --no-confirm --needed
+pacman -S vim docker i3 rofi feh wget rsync compton --noconfirm --needed  
+pacman -S python python3 mysql-workbench --noconfirm --needed
+pacman -S binutils make gcc fakeroot pkg-config git expac yajl --noconfirm --needed
+pacman -S sudo gdm htop tmux --noconfirm --needed
+sudo pacman -S firefox pulseaudio konsole termite intellij-idea-community-edition maven apache-ant nautilus screenfetch markdown atom calibre --noconfirm --needed
 systemctl enable gdm
-sudo pacman -S linux-headers --no-confirm --needed
-sudo pacman -S adobe-source-code-pro-fonts --no-confirm --needed
-sudo pacman -S python-pip --no-confirm --needed
+sudo pacman -S linux-headers --noconfirm --needed
+sudo pacman -S adobe-source-code-pro-fonts --noconfirm --needed
+sudo pacman -S python-pip --noconfirm --needed
 sudo pip install i3ipc
-sudo pacman -S powerline powerline-fonts texlive-most dunst openssh --no-confirm --needed
+sudo pacman -S powerline powerline-fonts texlive-most dunst openssh --noconfirm --needed
 useradd -m -g wheel -s /usr/bin/zsh tbrooks
 echo " %wheel  ALL=(ALL) ALL" >> /etc/sudoers
 

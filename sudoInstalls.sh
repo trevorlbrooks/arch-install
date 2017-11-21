@@ -25,5 +25,5 @@ pacman -S dunst
 useradd -m -g wheel -s /usr/bin/zsh tbrooks
 echo " %wheel  ALL=(ALL) ALL" >> /etc/sudoers
 
-su tbrooks -c sh -c "$(curl -fsSL https://raw.githubusercontent.com/trevorlbrooks/arch-install/master/userInstall.sh)"
+su tbrooks -c sh -c "$(curl -fsSL https://raw.githubusercontent.com/trevorlbrooks/arch-install/master/userInstalls.sh)"
 

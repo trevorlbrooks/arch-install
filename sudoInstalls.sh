@@ -10,7 +10,7 @@ pacman -S wicd grub --noconfirm --needed
 grub-install --target=i386-pc /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 systemctl enable wicd
-pacman -S vim docker i3 rofi feh wget rsync compton --noconfirm --needed  
+pacman -S vim docker i3 rofi feh wget rsync compton zsh --noconfirm --needed  
 pacman -S python python3 mysql-workbench --noconfirm --needed
 pacman -S binutils make gcc fakeroot pkg-config git expac yajl --noconfirm --needed
 pacman -S sudo gdm htop tmux --noconfirm --needed
@@ -20,8 +20,7 @@ pacman -S linux-headers --noconfirm --needed
 #pacman -S adobe-source-code-pro-fonts --noconfirm --needed
 pacman -S python-pip --noconfirm --needed
 pip install i3ipc
-#pacman -S powerline powerline-fonts texlive-most dunst openssh --noconfirm --needed
-pacman -S dunst
+pacman -S powerline powerline-fonts texlive-most dunst openssh --noconfirm --needed
 useradd -m -g wheel -s /usr/bin/zsh tbrooks
 echo " %wheel  ALL=(ALL) ALL" >> /etc/sudoers
 

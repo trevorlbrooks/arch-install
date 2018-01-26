@@ -12,7 +12,7 @@
     rm -r tmp
 
     yaourt -S polybar
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    #sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     mkdir .config/rofi
 
     mkdir projects
@@ -25,8 +25,8 @@
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     mkdir .vim/colors
     curl -o .vim/colors/256-grayvim.vim http://www.vim.org/scripts/download_script.php?src_id=12849
-    #pacaur -S texworks
-
+    #yaourt -S texworks
+    mkdir .config
     mkdir .config/i3
     mkdir .config/termite
     mkdir .config/rofi
@@ -43,5 +43,3 @@
 
     yaourt -S discord
     yaourt -S spotify
-
-

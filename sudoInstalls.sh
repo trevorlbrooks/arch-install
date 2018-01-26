@@ -24,7 +24,8 @@ pacman -S powerline powerline-fonts texlive-most dunst openssh --noconfirm --nee
 useradd -m -g wheel -s /usr/bin/zsh tbrooks
 echo " %wheel  ALL=(ALL) ALL" >> /etc/sudoers
 wget https://raw.githubusercontent.com/trevorlbrooks/arch-install/master/tempSudo
-cp tempSudo /etc/sudoers.d
+mkdir /etc/sudoers.d
+cp tempSudo /etc/sudoers.d/tempSudo
 chmod 0440 /etc/sudoers.d/tempSudo
 su tbrooks -c sh -c "$(curl -fsSL https://raw.githubusercontent.com/trevorlbrooks/arch-install/master/userInstalls.sh)"
 

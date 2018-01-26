@@ -1,15 +1,17 @@
     cd ~
-    mkdir tmp
     cd tmp
-    gpg --recv-keys --keyserver hkp://pgp.mit.edu 1EB2638FF56C0C53
-    curl -o PKGBUILD "https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=cower"
-    makepkg -i PKGBUILD
-    curl -o PKGBUILD "https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=pacaur"
-    makepkg -i PKGBUILD
+    git clone https://aur.archlinux.org/package-query.git
+    cd package-query
+    makepkg -si
+    cd ..
+    git clone https://aur.archlinux.org/yaourt.git
+    cd yaourt
+    makepkg -si
+    cd ..
     cd ..
     rm -r tmp
 
-    pacaur -S polybar
+    yaourt -S polybar
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     mkdir .config/rofi
 
@@ -39,8 +41,7 @@
     ln -s ~/projects/dotfiles/.config/dunst/config .config/dunst/config
     ln -s ~/projects/dotfiles/.config/compton/config .config/compton/config
 
-    gpg --recv-keys 0FC3042E345AD05D
-    pacaur -S discord
-    pacaur -S spotify
+    yaourt -S discord
+    yaourt -S spotify
 
 

@@ -1,2 +1,2 @@
-ALL ALL=(ALL) NOPASSWD: ALL
+tbrooks ALL= NOPASSWD: /usr/bin/makepkg
 

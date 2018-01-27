@@ -22,9 +22,6 @@ pacman -S linux-headers --noconfirm --needed
 #pip install i3ipc
 #pacman -S powerline powerline-fonts texlive-most dunst openssh --noconfirm --needed
 useradd -m -g wheel -s /usr/bin/zsh tbrooks
-mkdir /etc/sudoers.d
-echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers.d/wheel
-chmod 0440 /etc/sudoers.d/wheel
 wget https://raw.githubusercontent.com/trevorlbrooks/arch-install/master/tempSudo
 cp tempSudo /etc/sudoers.d/tempSudo
 chmod 0440 /etc/sudoers.d/tempSudo
@@ -32,3 +29,5 @@ su tbrooks -c sh -c "$(curl -fsSL https://raw.githubusercontent.com/trevorlbrook
 
 rm /etc/sudoers.d/tempSudo
 
+echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers.d/wheel
+chmod 0440 /etc/sudoers.d/wheel

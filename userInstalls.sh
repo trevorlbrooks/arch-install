@@ -23,13 +23,14 @@
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     mkdir .vim/colors
     curl -o .vim/colors/256-grayvim.vim http://www.vim.org/scripts/download_script.php?src_id=12849
-    yaourt -S texworks --no-confirm
+    yaourt -S texworks 
     mkdir .config
     mkdir .config/i3
     mkdir .config/termite
     mkdir .config/rofi
     mkdir .config/dunst
     mkdir .config/compton
+    rm ~/.bash_profile
     ln -s ~/projects/dotfiles/.bash_profile .bash_profile
     ln -s ~/projects/dotfiles/.tmux.conf .tmux.conf
     ln -s ~/projects/dotfiles/.config/i3/config .config/i3/config
@@ -39,5 +40,5 @@
     ln -s ~/projects/dotfiles/.config/dunst/config .config/dunst/config
     ln -s ~/projects/dotfiles/.config/compton/config .config/compton/config
 
-    yaourt -S discord --no-confirm
-    yaourt -S spotify --no-confirm
+    yaourt -S discord 
+    yaourt -S spotify 

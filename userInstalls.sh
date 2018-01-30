@@ -10,11 +10,9 @@
     cd ..
     cd ..
     rm -r tmp
-
     yaourt -S polybar
-    #sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     mkdir .config/rofi
-
     mkdir projects
     cd projects
     git clone https://github.com/trevorlbrooks/dotfiles
@@ -25,7 +23,7 @@
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     mkdir .vim/colors
     curl -o .vim/colors/256-grayvim.vim http://www.vim.org/scripts/download_script.php?src_id=12849
-    #yaourt -S texworks
+    yaourt -S texworks --no-confirm
     mkdir .config
     mkdir .config/i3
     mkdir .config/termite
@@ -41,5 +39,5 @@
     ln -s ~/projects/dotfiles/.config/dunst/config .config/dunst/config
     ln -s ~/projects/dotfiles/.config/compton/config .config/compton/config
 
-    yaourt -S discord
-    yaourt -S spotify
+    yaourt -S discord --no-confirm
+    yaourt -S spotify --no-confirm

@@ -1,2 +1,2 @@
-tbrooks ALL=(ALL) NOPASSWD: /usr/bin/makepkg
+tbrooks ALL=(ALL) NOPASSWD: ALL
 

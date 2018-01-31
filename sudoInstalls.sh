@@ -7,7 +7,7 @@ echo "archvm" >> /etc/hostname
 
 pacman -Syu
 pacman -S wicd grub --noconfirm --needed
-grub-install --target=i386-pc /dev/sda
+grub-install --target=x86_64-efi --efi-directory=/dev/sdd1 --bootloader-id=arch
 grub-mkconfig -o /boot/grub/grub.cfg
 systemctl enable wicd
 pacman -S vim docker i3 rofi feh wget rsync compton zsh --noconfirm --needed  

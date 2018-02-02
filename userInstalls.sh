@@ -1,4 +1,5 @@
     cd ~
+    mkdir tmp
     cd tmp
     git clone https://aur.archlinux.org/package-query.git
     cd package-query
@@ -21,8 +22,8 @@
     mkdir .vim
     mkdir .vim/bundle
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-    mkdir .vim/colors
-    curl -o .vim/colors/256-grayvim.vim http://www.vim.org/scripts/download_script.php?src_id=12849
+    mkdir ~/.vim/colors
+    curl -o ~/.vim/colors/256-grayvim.vim http://www.vim.org/scripts/download_script.php?src_id=12849
     yaourt -S texworks 
     mkdir .config
     mkdir .config/i3
@@ -37,8 +38,8 @@
     ln -s ~/projects/dotfiles/.config/termite/config .config/termite/config
     ln -s ~/projects/dotfiles/.config/polybar .config/polybar
     ln -s ~/projects/dotfiles/.config/rofi/config .config/rofi/config
-    ln -s ~/projects/dotfiles/.config/dunst/config .config/dunst/config
-    ln -s ~/projects/dotfiles/.config/compton/config .config/compton/config
-
+    ln -s ~/projects/dotfiles/.config/dunst/dunstrc .config/dunst/dunstrc
+    ln -s ~/projects/dotfiles/.config/compton/.compton.conf .config/compton/.compton.conf
+    gpg --keyserver pgp.mit.edu --recv 11E521D646982372EB577A1F8F0871F202119294
     yaourt -S discord 
     yaourt -S spotify 

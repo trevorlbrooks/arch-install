@@ -27,7 +27,6 @@ useradd -m -g wheel -s /usr/bin/zsh tbrooks
 wget https://raw.githubusercontent.com/trevorlbrooks/arch-install/master/tempSudo
 cp tempSudo /etc/sudoers.d/tempSudo
 chmod 0440 /etc/sudoers.d/tempSudo
-gpg --keyserver pgp.mit.edu --recv 11E521D646982372EB577A1F8F0871F202119294
 su tbrooks -c sh -c "$(curl -fsSL https://raw.githubusercontent.com/trevorlbrooks/arch-install/master/userInstalls.sh)"
 rm /etc/sudoers.d/tempSudo
 echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers.d/wheel

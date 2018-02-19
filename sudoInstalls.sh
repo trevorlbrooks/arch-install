@@ -4,12 +4,12 @@ echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 locale-gen
 localectl set-locale LANG=en_US.UTF-8
 
-echo "archvm" >> /etc/hostname
+echo "venticup" >> /etc/hostname
 
 pacman -Syu
 pacman -S wicd grub --noconfirm --needed
 mkdir /esp
-mount /dev/sdd1 /esp
+mount /dev/sda2 /esp
 grub-install --target=x86_64-efi --efi-directory=/esp --bootloader-id=arch
 grub-mkconfig -o /boot/grub/grub.cfg
 systemctl enable wicd

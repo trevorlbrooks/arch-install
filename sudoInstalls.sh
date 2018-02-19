@@ -2,6 +2,7 @@ ln -sf /usr/share/zoneinfo/America/Denver /etc/localtime
 hwclock --systohc
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 locale-gen
+localectl set-locale LANG=en_US.UTF-8
 
 echo "archvm" >> /etc/hostname
 

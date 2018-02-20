@@ -7,7 +7,7 @@ localectl set-locale LANG=en_US.UTF-8
 echo "venticup" >> /etc/hostname
 
 pacman -Syu
-pacman -S wicd grub --noconfirm --needed
+pacman -S wicd grub efibootmgr --noconfirm --needed
 mkdir /esp
 mount /dev/sda2 /esp
 grub-install --target=x86_64-efi --efi-directory=/esp --bootloader-id=arch

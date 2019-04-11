@@ -13,17 +13,17 @@ mount /dev/sda2 /esp
 grub-install --target=x86_64-efi --efi-directory=/esp --bootloader-id=arch
 grub-mkconfig -o /boot/grub/grub.cfg
 systemctl enable wicd
-pacman -S vim docker i3 rofi feh wget rsync compton zsh --noconfirm --needed  
-pacman -S python python3 mysql-workbench --noconfirm --needed
-pacman -S binutils make gcc fakeroot pkg-config git expac yajl --noconfirm --needed
-pacman -S sudo gdm htop tmux --noconfirm --needed
-pacman -S firefox pulseaudio konsole termite intellij-idea-community-edition maven apache-ant nautilus screenfetch markdown atom calibre --noconfirm --needed
+pacman -S vim docker i3 rofi feh gnome reflector wget rsync compton zsh \ 
+    python python3 mysql-workbench \
+    binutils make gcc fakeroot pkg-config git expac yajl \
+    sudo gdm htop tmux \
+    firefox pulseaudio konsole termite nautilus screenfetch markdown code calibre \
+    linux-headers dotnet-sdk \
+    adobe-source-code-pro-fonts \
+    python-pip powerline powerline-fonts dunst openssh --noconfirm --needed
+
 systemctl enable gdm
-pacman -S linux-headers --noconfirm --needed
-pacman -S adobe-source-code-pro-fonts --noconfirm --needed
-pacman -S python-pip --noconfirm --needed
 pip install i3ipc
-pacman -S powerline powerline-fonts texlive-most dunst openssh --noconfirm --needed
 useradd -m -g wheel -s /usr/bin/zsh tbrooks
 wget https://raw.githubusercontent.com/trevorlbrooks/arch-install/master/tempSudo
 cp tempSudo /etc/sudoers.d/tempSudo

@@ -13,7 +13,7 @@ mount /dev/sda2 /esp
 grub-install --target=x86_64-efi --efi-directory=/esp --bootloader-id=arch
 grub-mkconfig -o /boot/grub/grub.cfg
 systemctl enable wicd
-pacman -S vim docker i3 rofi feh gnome reflector wget rsync compton zsh \ 
+pacman -S vim docker i3 rofi feh gnome reflector wget rsync compton zsh \
     python python3 mysql-workbench \
     binutils make gcc fakeroot pkg-config git expac yajl \
     sudo gdm htop tmux \

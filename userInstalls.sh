@@ -1,6 +1,6 @@
 cd ~
-mkdir tmp
-cd tmp
+mkdir aur
+cd aur
 git clone https://aur.archlinux.org/polybar.git
 cd polybar
 makepkg -si
@@ -11,9 +11,17 @@ cd discord
 makepkg -si
 cd ..
 git clone https://aur.archlinux.org/spotify.git
+cd spotify
 makepkg -si
 cd ..
-rm -r tmp
+git clone https://aur.archlinux.org/pulseaudio-ctl.git
+cd pulseaudio-ctl
+makepkg -si
+cd ..
+git clone https://aur.archlinux.org/hyper.git
+cd hyper
+makepkg -si
+cd ..
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 mkdir .config/rofi
 mkdir projects
